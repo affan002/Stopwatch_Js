@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh ;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* stopwatch structure  */
+.outercircle {
+    width: 400px;
+    height: 200px;
+    border-radius: 10%;
+    margin-top: 20px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.innercircle {
+    background-image: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 390px;
+    height: 190px;
+    border-radius: 10%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* control buttons + time text */
+.text {
+    color: white;
+    font-size: 23px;
+}
+
+.minute {
+    font-size: 60px;
+}
+
+.sec {
+    font-size: 50px;
+}
+
+.msec {
+    font-size: 38px;
+}
+
+.button-wrapper {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid aqua;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: aqua;
+    color: black;
+}
+
+
+/* css for laps */
+.laps {
+    list-style: none;
+    color: white;
+    width: 400px;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    padding: 30px 0;
+}
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+
+.lap-item {
+    display: inline-block;
+    width: 100% ;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid grey;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.lap-number {
+    color: #cccccc;
+}
+
+.lap-time {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+
+.lap-clear-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.lap-clear-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
