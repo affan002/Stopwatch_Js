@@ -1,2 +1,2 @@
-# PRODIGY_WD_02
+# PRODIGY_JS
 A web stopwatch made using html, css and javascript
