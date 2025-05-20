@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            
+        }
+
+        .left {
+            background-color: red;
+
+        }
+
+        .right {
+            background-color: blue;
+        }
+        
+        .align-horizontal {
+            display: flex;
+            justify-content: center;
+        }
+
+        .align-vertical {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        .grid1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left align-vertical">
+            <div class="align-horizontal">
+                <h1 class="left-text">Left</h1>
+            </div>
+            <div class="align-horizontal">
+                <h4>text text text </h4>
+            </div>
+        </div>
+        <div class="grid1 right">
+            <h2>Col 1</h2>
+            <h2>Col 2</h2>
+            <h2>Col 3</h2>
+            <h2>Col 1</h2>
+            <h2>Col 2</h2>
+            <h2>Col 3</h2>
+            <h2>Col 1</h2>
+            <h2>Col 2</h2>
+            <h2>Col 3</h2>
+        </div>
+    </div>
+</body>
+
+</html>

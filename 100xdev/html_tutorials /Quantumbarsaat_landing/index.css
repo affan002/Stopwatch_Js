@@ -1,0 +1,31 @@
+
+
+.picture_div {
+    margin-top: 60px;
+    margin-right: 200px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-left, .img-right{
+    height:  100px;
+    object-fit: contain;
+}
+
+.header_div{
+    margin: 150 180 60 180;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.para {
+    margin-right: 200px;
+    margin-left: 200px;
+    font-size: 22px;
+}
+
+.schedule {
+    object-fit: contain;
+    margin: 60 200 60 200;
+}

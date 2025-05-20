@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Todo List</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Todo list</h1>
+  <div class="todos">
+    
+  </div>
+  <div>
+    <input id="inp" type="text">
+    <button onclick="addTodo()">Add Todo</button>
+  </div>
+
+  <script>
+    let currentIndex = 1;
+
+    function addTodo() {
+		const parent = document.querySelector(".todos");
+		const content = document.getElementById("inp").value
+
+		if (content === '') {
+        alert('Please enter a todo item.');
+        return;
+      }
+
+		const newChild = document.createElement("div")
+		newChild.setAttribute("id", "todo-"+currentIndex)
+
+		const newTodoHeading = document.createElement("h4");
+		newTodoHeading.textContent = `${currentIndex}. ${content}`
+
+		const newDelButton = document.createElement("button")
+		newDelButton.textContent = "delete"
+		newDelButton.setAttribute("onclick", `deleteTodo(${currentIndex})`);
+
+
+		newChild.appendChild(newTodoHeading);
+		newChild.appendChild(newDelButton);
+
+		parent.appendChild(newChild)
+
+		currentIndex+=1
+
+		document.getElementById("inp").value = '';
+	}
+      
+	function deleteTodo(index) {
+      const parent = document.querySelector(".todos");
+	  const child = document.getElementById("todo-"+index);
+	  parent.removeChild(child)
+    }
+  </script>
+</body>
+
+</html>
